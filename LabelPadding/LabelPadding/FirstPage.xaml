@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ x:Class="LabelPadding.FirstPage" Title = "Sample">
+	<ContentPage.Content>
+	<StackLayout Spacing="0">
+
+	<!-- Here we are using WidthRequest = "50" for labels.
+		 Lables are occuping 50% of width properly, but padding(top,bottom) of stacklayout
+		 is increasing by 10px for each line.
+	 -->
+	
+				<StackLayout Padding="0" Spacing="0" BackgroundColor="#eeeeee" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Label Text="Storage" FontAttributes = "Bold" FontSize="13" YAlign="Center" TextColor="#3a3a3a" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="50"/>
+                    <Label Text="256 GB SATA SSD" FontSize="13" YAlign="Center" TextColor="#6b6b6b" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="50"/>
+                </StackLayout>
+
+                <StackLayout Padding="0" Spacing="0" BackgroundColor="Gray" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Label Text="Warranty" FontAttributes = "Bold" FontSize="13" YAlign="Center" TextColor="#3a3a3a" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="50"/>
+                    <Label Text="3 years standard parts, labour and on-site limited warranty, 3 Years limited warranty on primary battery" FontSize="13" YAlign="Center" TextColor="#6b6b6b" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="50"/>
+                </StackLayout>
+
+                <StackLayout Padding="0" Spacing="0" BackgroundColor="#eeeeee" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Label Text="Features" FontAttributes = "Bold" FontSize="13" YAlign="Center" TextColor="#3a3a3a" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="50"/>
+                    <Label Text="Gorilla glass, Edge cut. Some extra additional features from other manufacturers" FontSize="13" YAlign="Center" TextColor="#6b6b6b" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="50"/>
+                </StackLayout>
+
+     
+
+      <!-- Here we removed WidthRequest = "50" for labels.
+		   So extra padding for stacklayout is removed, but we need second label to start from center of device width,
+			i.e width of iPhone 5 is 320, so Second label should start from 160px,
+			as above code snippet. Please uncomment and check this.
+	  -->
+	  <!--
+      			<StackLayout Padding="0" Spacing="0" BackgroundColor="#eeeeee" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Label Text="Storage" FontAttributes = "Bold" FontSize="13" YAlign="Center" TextColor="#3a3a3a" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Label Text="256 GB SATA SSD" FontSize="13" YAlign="Center" TextColor="#6b6b6b" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+
+                <StackLayout Padding="0" Spacing="0" BackgroundColor="Gray" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Label Text="Warranty" FontAttributes = "Bold" FontSize="13" YAlign="Center" TextColor="#3a3a3a" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Label Text="3 years standard parts, labour and on-site limited warranty, 3 Years limited warranty on primary battery" FontSize="13" YAlign="Center" TextColor="#6b6b6b" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+
+                <StackLayout Padding="0" Spacing="0" BackgroundColor="#eeeeee" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Label Text="Features" FontAttributes = "Bold" FontSize="13" YAlign="Center" TextColor="#3a3a3a" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Label Text="Gorilla glass, Edge cut. Some extra additional features from other manufacturers" FontSize="13" YAlign="Center" TextColor="#6b6b6b" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+      
+	-->
+	</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
